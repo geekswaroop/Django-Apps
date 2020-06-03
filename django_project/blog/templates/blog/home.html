@@ -1,17 +1,11 @@
-<!DOCTYPE html>
-<html>
-    <head>
-    {% if title is not NULL %}
-        <title>Django Blog - {{title}}</title>
-    {% else %}
-        <title>Django Blog</title>
-    {% endif %}
-    </head>
-    <body>
-       {% for post in key %}
-       <h1>Title: {{post.title}}</h1>
-       <p>Written by {{post.author}} on {{post.date_posted}}</p>
-       <p>{{post.content}}</p>
-       {% endfor %}
-    </body>
-</html>
+{%extends "blog/base.html"%}
+{% block content %}
+<body>
+    {% for post in key %}
+    <h1>Title: {{post.title}}</h1>
+    <p>Written by {{post.author}} on {{post.date_posted}}</p>
+    <p>{{post.content}}</p>
+    {% endfor %}
+ </body>
+{% endblock %}
+

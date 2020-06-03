@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% if title is not NULL %}
+            <title>Django Blog - {{title}}</title>
+        {% else %}
+            <title>Django Blog</title>
+        {% endif %}
+    </head>
+    <body>
+        {%block content %}{% endblock %}
+    </body>
+</html>
